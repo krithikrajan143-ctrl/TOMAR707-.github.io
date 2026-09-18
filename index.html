@@ -19,6 +19,8 @@ h2{color:#00ff88}
 ul{line-height:2}
 a{color:#00ffb3;text-decoration:none}
 @media(max-width:650px){.grid{grid-template-columns:1fr}h1{font-size:42px}.photo{width:155px;height:155px}}
+
+.album{margin-top:28px}.album-title{text-align:center;margin-bottom:18px}.album-title p{color:#b9dfd0;margin:6px 0 0}.album-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.album-item{position:relative;overflow:hidden;border:1px solid #164d38;border-radius:16px;background:#050b09;cursor:pointer;aspect-ratio:1/1}.album-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}.album-item:hover img{transform:scale(1.06)}.album-item span{position:absolute;left:10px;bottom:8px;background:#0009;color:#fff;padding:5px 9px;border-radius:10px;font-size:12px}.lightbox{display:none;position:fixed;inset:0;background:#000e;z-index:9999;align-items:center;justify-content:center;padding:20px}.lightbox.open{display:flex}.lightbox img{max-width:94vw;max-height:88vh;border-radius:14px}.close-lightbox{position:absolute;top:18px;right:22px;color:#fff;font-size:34px;cursor:pointer}@media(max-width:650px){.album-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
 </style>
 </head>
 <body>
@@ -35,6 +37,22 @@ a{color:#00ffb3;text-decoration:none}
 <div class="box"><h2>Focus</h2><p>BUILD • SECURE • INNOVATE</p></div>
 <div class="box"><h2>Contact</h2><p>Email: <a href="mailto:tomar.dev@gmail.com">tomar.dev@gmail.com</a></p><p>Location: India</p></div>
 </div>
+
+<div class="album"><div class="box"><div class="album-title"><h2>Memories Album</h2><p>Special moments • Photos • Memories</p></div><div class="album-grid">
+<div class="album-item" onclick="openLightbox('memories/1000298523.png')"><img src="memories/1000298523.png" alt="Memory 1" loading="lazy"><span>Memory 01</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000298306.png')"><img src="memories/1000298306.png" alt="Memory 2" loading="lazy"><span>Memory 02</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000295618.jpg')"><img src="memories/1000295618.jpg" alt="Memory 3" loading="lazy"><span>Memory 03</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000295617.jpg')"><img src="memories/1000295617.jpg" alt="Memory 4" loading="lazy"><span>Memory 04</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000295615.jpg')"><img src="memories/1000295615.jpg" alt="Memory 5" loading="lazy"><span>Memory 05</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000295606.jpg')"><img src="memories/1000295606.jpg" alt="Memory 6" loading="lazy"><span>Memory 06</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000295289.jpg')"><img src="memories/1000295289.jpg" alt="Memory 7" loading="lazy"><span>Memory 07</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000294983.jpg')"><img src="memories/1000294983.jpg" alt="Memory 8" loading="lazy"><span>Memory 08</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000294982.png')"><img src="memories/1000294982.png" alt="Memory 9" loading="lazy"><span>Memory 09</span></div>
+<div class="album-item" onclick="openLightbox('memories/6984d12d-809e-4a9f-b84a-a11d5534db35-1_all_37034.jpg')"><img src="memories/6984d12d-809e-4a9f-b84a-a11d5534db35-1_all_37034.jpg" alt="Memory 10" loading="lazy"><span>Memory 10</span></div>
+<div class="album-item" onclick="openLightbox('memories/1000293306.png')"><img src="memories/1000293306.png" alt="Memory 11" loading="lazy"><span>Memory 11</span></div>
+</div></div></div>
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)"><div class="close-lightbox" onclick="closeLightbox()">×</div><img id="lightboxImg" src="" alt="Memory preview"></div>
+<script>function openLightbox(src){document.getElementById('lightboxImg').src=src;document.getElementById('lightbox').classList.add('open')}function closeLightbox(e){if(!e||e.target.id==='lightbox'||e.target.classList.contains('close-lightbox')){document.getElementById('lightbox').classList.remove('open');document.getElementById('lightboxImg').src=''}}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});</script>
 </div></div>
 </body>
 </html>
